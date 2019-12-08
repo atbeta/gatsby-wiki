@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-wiki",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": "git@github.com:atbeta/gatsby-wiki.git",
+  "author": "Beta <me@pbeta.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  }
+}
