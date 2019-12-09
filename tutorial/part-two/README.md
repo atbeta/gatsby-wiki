@@ -125,7 +125,7 @@ gatsby develop
 
 在浏览器中查看，应该会看到淡紫色背景并已应用了 “hello world” 模板的启动页面：
 
-![Lavender Hello World!](global-css.png)
+![Lavender Hello World!](./global-css.png)
 
 > 提示：本教程这一部分重点介绍了最快和最直接的设置 Gatsby 网站 CSS 样式的方法 - 使用 `gatsby-browser.js` 直接导入标准 CSS 样式文件。 在大多数情况下，添加全局样式的最佳方法是使用公共的布局组件。[查看文档](/docs/global-css/) 了解有关该方法的更多信息。
 
@@ -192,7 +192,7 @@ export default () => (
 
 现在，如果你访问 `http://localhost:8000/about-css-modules/`，则页面应如下所示：
 
-![使用 CSS 模块设置页面](css-modules-basic.png)
+![使用 CSS 模块设置页面](./css-modules-basic.png)
 
 #### ✋ 使用 CSS 模块为组件设置样式
 
@@ -250,7 +250,7 @@ console.log(styles)
 
 代码 `console.log(styles)` 将在控制台打印出已处理的被导入的 `./about-css-modules.module.css` 文件的结果。 如果你在浏览器中打开开发者控制台（使用 Firefox 或 Chrome 的开发者工具），则会看到：
 
-![在控制台中导入的 CSS 模块的结果](https://github.com/gatsbyjs/gatsby/raw/master/docs/tutorial/part-two/css-modules-console.png)
+![在控制台中导入的 CSS 模块的结果](./css-modules-console.png)
 
 如果将其与 CSS 文件进行比较，你会发现每个格式现在都是导入对象中指向长字符串的键（key），例如 `avatar` 指向 `src-pages----about-css-modules-module---avatar---2lRF7`。 这些样式名称是 CSS 模块生成的。 保证它们在你的网站上是唯一的。 而且由于必须导入它们才能使用这些类，所以对于在任何地方使用这些 CSS 样式都没问题。
 
@@ -299,7 +299,7 @@ export default () => (
 
 现在完成的页面应如下所示：
 
-![带有 CSS 模块的用户列表页面](css-modules-userlist.png)
+![带有 CSS 模块的用户列表页面](./css-modules-userlist.png)
 
 ### CSS-in-JS
 

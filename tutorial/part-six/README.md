@@ -70,11 +70,11 @@ module.exports = {
 
 重启开发服务器，然后刷新（或者重新打开） GraphiQL，看一看自动完成列表的内容：
 
-![Makrdown 自动完成](markdown-autocomplete.png)
+![Makrdown 自动完成](./markdown-autocomplete.png)
 
 再次选择 `allMarkdownRemark` 并且运行，和之前对 `allFile` 的操作一样。你会看到新添加的 Markdown 文件。然后再探索一下 `MarkdownRemark` 这个节点的字段。
 
-![Markdown 查询](markdown-query.png)
+![Markdown 查询](./markdown-query.png)
 
 很好！希望你已经掌握了一些基础知识。数据源插件把数据 _导入_ 到 Gatsby 的数据系统，然后 _数据转换_ 插件转换数据源插件导入的原始内容。这个模式能够处理构建 Gatsby 网站时可能需要的所有数据源和数据转换。
 
@@ -150,7 +150,7 @@ export const query = graphql`
 
 现在首页应该是这样:
 
-![首页](frontpage.png)
+![首页](./frontpage.png)
 
 但是只有一篇博文，形单影只。所以让我们在这个地址添加另一篇 `src/pages/pandas-and-bananas.md` 。
 
@@ -166,7 +166,7 @@ seem to really enjoy bananas!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
 ```
 
-![两篇博文](two-posts.png)
+![两篇博文](./two-posts.png)
 
 看起来不错！除了……博文顺序不对。
 

@@ -86,7 +86,7 @@ gatsby serve
 npm install --save gatsby-plugin-manifest
 ```
 
-2. 添加一个网站图标（favicon） `src/images/icon.png` 到你的应用里。就本章教程所构建的应用而言，如果你手头没有可用的图标，你可以使用 [这个示例图标](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png)。这个图标是为清单文件构建所有图像所必需的。详情请查这篇文档 [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md)。
+2. 添加一个网站图标（favicon） `src/images/icon.png` 到你的应用里。就本章教程所构建的应用而言，如果你手头没有可用的图标，你可以使用 [这个示例图标](./icon.png)。这个图标是为清单文件构建所有图像所必需的。详情请查这篇文档 [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md)。
 
 3. 在 `gatsby-config.js` 文件里，把插件添加到 `plugins` 数组中。
 

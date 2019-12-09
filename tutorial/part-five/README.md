@@ -79,11 +79,11 @@ module.exports = {
 
 在 explorer 面板里，你会看见 `allFile` 和 `file` 这两个可选项：
 
-![GraphiQL 文件系统](graphiql-filesystem.png)
+![GraphiQL 文件系统](./graphiql-filesystem.png)
 
 点击 `allFile` 下拉按钮，在 query 输入框中，把光标放在 `allFile` 之后，然后按下 <kbd>Ctrl + Enter</kbd>。它会为你自动填好查询所有文件的语句。按下 “Play” 按钮来运行查询语句：
 
-![文件系统查询](filesystem-query.png)
+![文件系统查询](./filesystem-query.png)
 
 在 explorer 面板中，`id` 字段已经被自动选择了。通过选中字段的相应复选框来选择更多字段。按下 “Play” 按钮以使用新字段再次运行查询：
 
@@ -91,11 +91,11 @@ module.exports = {
 
 或者，你可以使用自动完成的快捷键（<kbd>Ctrl + Space</kbd>）。这将在 `File` 节点上显示可查询的字段。
 
-![文件系统的自动完成](filesystem-autocomplete.png)
+![文件系统的自动完成](./filesystem-autocomplete.png)
 
 尝试在查询中添加许多字段，每次要重新运行查询的时候按下 <kbd>Ctrl + Enter</kbd>。你会看到更新后的查询结果：
 
-![所有文件的查询](allfile-query.png)
+![所有文件的查询](./allfile-query.png)
 
 结果是一个 `File` “节点” 的数组（节点（node）是图（graph）中一个对象的特殊称呼）。每个 `File` 节点对象都包含了你要查询的字段。
 
@@ -141,7 +141,7 @@ export const query = graphql`
 
 如果你访问了一个新页面 `/my-files/` 并打开浏览器控制台，你会看到类似于：
 
-![控制台中显示的数据](data-in-console.png)
+![控制台中显示的数据](./data-in-console.png)
 
 图片里的数据和 GraphQL 查询语句是相匹配的。
 
@@ -203,7 +203,7 @@ export const query = graphql`
 
 然后访问 [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
 
-![我的文件页面](my-files-page.png)
+![我的文件页面](./my-files-page.png)
 
 ## 接下来？
 

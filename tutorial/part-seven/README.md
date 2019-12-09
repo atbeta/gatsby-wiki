@@ -69,7 +69,7 @@ exports.onCreateNode = ({ node, getNode }) => {
 
 在重启开发服务器之后，你应该能在终端看到你的两个 Markdown 文件的相对路径。
 
-![Markdown 相对路径](markdown-relative-path.png)
+![Markdown 相对路径](./markdown-relative-path.png)
 
 现在你需要创建 slug。由于通过文件名创建 slug 的逻辑可能会很棘手，因此 `gatsby-source-filesystem` 插件附带了创建 slug 的功能。让我们来使用它。
 
@@ -176,7 +176,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 上面的代码是从 Markdown 创建页面的第一步。你使用了我们提供的 `graphql` 函数查询你创建的 Markdown slug。然后你会在终端里看到如下查询结果：
 
-![查询 Markdown slugs](query-markdown-slugs.png)
+![查询 Markdown slugs](./query-markdown-slugs.png)
 
 创建页面还需要一样东西：一个页面模板组件。与 Gatsby 中所有其他东西一样，用编程生成的页面也是依靠 React 组件的。创建页面时，需要指定所使用的组件。
 
@@ -247,11 +247,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
 重启开发服务器后，你会看到页面已经创建好了！在开发过程中，找到新创建页面的一种简单方法是：随便转到一个不存在的路径，在该路径中 Gatsby 会帮你显示出站点的页面列表。比如转到 <http://localhost:8000/sdf>，就会看到你创建的新页面。
 
-![新页面](new-pages.png)
+![新页面](./new-pages.png)
 
 访问其中一个页面，你将会看到：
 
-![Hello World 博文](hello-world-blog-post.png)
+![Hello World 博文](./hello-world-blog-post.png)
 
 看起来有点单调无聊，而且并不是你想要看到的。现在你可以从 Markdown 博文中提取数据。把 `src/templates/blog-post.js` 的文件内容替换为：
 
@@ -292,7 +292,7 @@ export const query = graphql`
 
 见证奇迹的时刻……
 
-![博文](blog-post.png)
+![博文](./blog-post.png)
 
 哇哦!
 
