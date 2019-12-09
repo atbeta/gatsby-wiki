@@ -2,7 +2,34 @@ module.exports = {
   title: 'Gatsby 中文文档',
   description: '基于 React + Typescript + GraphQL 快速搭建网站',
   themeConfig: {
-    nav: [{ text: 'Home', link: '/' }, { text: 'Guide', link: '/guides/' }]
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '文档', link: '/docs/' },
+      { text: '教程', link: '/tutorials/' },
+    ],
+    sidebar: {
+      '/docs': [
+        {
+          title: '文档',
+          collapsable: false,
+          children: [
+            '/docs/introduction',
+            '/docs/quick-start'
+          ]
+        },
+        {
+          title: '参考指南',
+          collapsable: true,
+          children: [ /* ... */ ]
+        }
+      ],
+      '/tutorials': [
+        {
+          title: '测试'
+        }
+      ]
+    },
+    sidebarDepth: 2
   },
   dest: 'public'
 }
