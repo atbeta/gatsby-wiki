@@ -25,7 +25,12 @@ module.exports = {
       ],
       '/tutorials': [
         {
-          title: '测试'
+          title: '测试',
+          collapsable: false,
+          children: [
+            ['/tutorials/', '介绍'],
+            ['/tutorials/part-zero/', '第一部分']
+          ]
         }
       ]
     },
