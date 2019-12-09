@@ -90,7 +90,7 @@ npm install --save gatsby-plugin-manifest
 
 3. 在 `gatsby-config.js` 文件里，把插件添加到 `plugins` 数组中。
 
-```javascript:title=gatsby-config.js
+```javascript
 {
   plugins: [
     {
@@ -129,7 +129,7 @@ npm install --save gatsby-plugin-offline
 
 2.  在 `gatsby-config.js` 文件里，把插件添加到 `plugins` 数组中。
 
-```javascript:title=gatsby-config.js
+```javascript
 {
   plugins: [
     {
@@ -174,7 +174,7 @@ npm install --save gatsby-plugin-react-helmet react-helmet
 
 2.  确保你的 `siteMetadata` 对象中配置好了 `description` 和 `author`。 并在 `gatsby-config.js` 文件里添加 `gatsby-plugin-react-helmet` 插件到 `plugins` 数组中。
 
-```javascript:title=gatsby-config.js
+```javascript
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
@@ -207,7 +207,7 @@ module.exports = {
 
 3. 在 `src/components` 目录里, 创建一个名为 `seo.js` 的文件并添加以下内容：
 
-```jsx:title=src/components/seo.js
+```jsx
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
@@ -295,7 +295,7 @@ export default SEO
 
 4.  现在你可以在模版和页面中使用 `<SEO>` 组件，并把 props 传进去。比如像这样添加到 `blog-post.js` 模版里：
 
-```jsx:title=src/templates/blog-post.js
+```jsx
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"

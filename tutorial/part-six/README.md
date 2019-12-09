@@ -20,7 +20,7 @@ disableTableOfContents: true
 
 添加一个 Markdown 文件，位于 `src/pages/sweet-pandas-eating-sweets.md`（它会成为你的第一篇 Markdown 博客）。你将会学习到如何使用数据转换插件和 GraphQL 来把它 _转换_ 成 HTML 的形式。
 
-```markdown:title=src/pages/sweet-pandas-eating-sweets.md
+```markdown
 ---
 title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
@@ -43,7 +43,7 @@ npm install --save gatsby-transformer-remark
 
 然后像往常一样把这些代码添加到 `gatsby-config.js`：
 
-```javascript:title=gatsby-config.js
+```javascript
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
@@ -84,7 +84,7 @@ module.exports = {
 
 和我们对 `src/pages/my-files.js` 页面所做的一样，把 `src/pages/index.js` 替换为以下代码，来添加一个 GraphQL 查询语句、一些初步的 HTML 和样式。
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
@@ -154,7 +154,7 @@ export const query = graphql`
 
 但是只有一篇博文，形单影只。所以让我们在这个地址添加另一篇 `src/pages/pandas-and-bananas.md` 。
 
-```markdown:title=src/pages/pandas-and-bananas.md
+```markdown
 ---
 title: "Pandas and Bananas"
 date: "2017-08-21"
@@ -186,4 +186,4 @@ seem to really enjoy bananas!
 
 你做的很棒！你创建了一个漂亮的索引页，在这个页面里你可以查询你的 Markdown 文件，并生成一个博文标题与摘要的列表。但你不只是想要看到摘要，你想看到你的 Markdown 文件的真正博文页面。
 
-你可以通过将 React 组件放置在 `src/pages` 目录中来继续创建页面。但是接下来，你将学习如何通过 _以编程的方式_ 利用 _数据_ 创建页面。Gatsby _并不_ 仅限于使用文件（例如许多静态网站生成器）制作页面。Gatsby 同样可以在构建时使用 GraphQL 查询 _数据_ 并将查询结果 _映射_ 到 _页面_ 中。这是一个非常好的想法。在下一章教程中，你将探索这个想法的具体含义和使用方法，并且学习如何 [以编程的方式利用数据创建页面](/tutorial/part-seven/)。
+你可以通过将 React 组件放置在 `src/pages` 目录中来继续创建页面。但是接下来，你将学习如何通过 _以编程的方式_ 利用 _数据_ 创建页面。Gatsby _并不_ 仅限于使用文件（例如许多静态网站生成器）制作页面。Gatsby 同样可以在构建时使用 GraphQL 查询 _数据_ 并将查询结果 _映射_ 到 _页面_ 中。这是一个非常好的想法。在下一章教程中，你将探索这个想法的具体含义和使用方法，并且学习如何 [以编程的方式利用数据创建页面](/tutorial/part-seven/)。  

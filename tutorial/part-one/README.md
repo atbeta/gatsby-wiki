@@ -53,7 +53,7 @@ _注意: 再次说明一下, 这里展示的编辑器是 Visual Studio Code。�
 
 2.  现在你可以做点更显眼的改动。尝试把 `src/pages/index.js` 中的代码替换成下面这段，然后保存。你会看到文本有所变化——文字颜色变成紫色并且字体变大。
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -65,7 +65,7 @@ export default () => (
 
 3.  删除字体大小的样式（fontSize），把 “Hello Gatsby!” 放到一个一级标题（h1）中，并且在标题下面增加一个段落（p）。
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -82,7 +82,7 @@ export default () => (
 
 4.  增加一张图片。 (这里我们随意选取了 Unsplash 上的一张图片).
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -103,7 +103,7 @@ _如果你对 React 和 JSX 有所了解，你可以跳过这一段。_ 如果�
 
 这是我们 `src/pages/index.js` 文件的原始内容:
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 
 export default () => <div>Hello world!</div>
@@ -111,7 +111,7 @@ export default () => <div>Hello world!</div>
 
 如果使用纯 JavaScript, 这个文件就变成:
 
-```javascript:title=src/pages/index.js
+```javascript
 import React from "react"
 
 export default () => React.createElement("div", null, "Hello world!")
@@ -156,7 +156,7 @@ In the world of components, you instead create a `PrimaryButton` component with 
 
 1.  新建一个文件，路径是 `src/pages/about.js`。把以下代码复制到这个新文件里并保存。
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -180,7 +180,7 @@ export default () => (
 1.  新建一个目录于 `src/components` ，然后新建一个文件在这个目录里，命名这个文件为 `header.js`。
 2.  把以下代码添加到新的 `src/components/header.js` 文件里。
 
-```jsx:title=src/components/header.js
+```jsx
 import React from "react"
 
 export default () => <h1>This is a header.</h1>
@@ -188,7 +188,7 @@ export default () => <h1>This is a header.</h1>
 
 3.  修改 `about.js` 文件，为其引入 `Header` 组件。替换 `h1` 标记为  `<Header />`。
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 import Header from "../components/header" // highlight-line
 
@@ -206,7 +206,7 @@ export default () => (
 
 4.  回到 `src/components/header.js` 文件里，做以下改动：
 
-```jsx:title=src/components/header.js
+```jsx
 import React from "react"
 
 export default props => <h1>{props.headerText}</h1> {/* highlight-line */}
@@ -214,7 +214,7 @@ export default props => <h1>{props.headerText}</h1> {/* highlight-line */}
 
 5.  回到 `src/pages/about.js` 文件里，做以下改动：
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 import Header from "../components/header"
 
@@ -235,13 +235,13 @@ export default () => (
 你刚刚定义了 React 组件作为描述 UI 的可复用片段。要使这些可复用片段动态化，你需要给它们提供不同的数据。你可以通过一种叫做 “props" 的输入。Props，正如其名，是给 React 组件使用的属性（property）。
 
 在 `about.js` 里，你为引入的 `Header` 子组件传入了一个值为 `"About Gatsby"` 的 `headerText` prop：
-```jsx:title=src/pages/about.js
+```jsx
 <Header headerText="About Gatsby" />
 ```
 
 在 `header.js` 中，header 组件期望接收到 `headerText` prop（因为你在 `about.js` 里已经写好它是这么期望的）。所以可以这样使用这个 prop：
 
-```jsx:title=src/components/header.js
+```jsx
 <h1>{props.headerText}</h1>
 ```
 
@@ -249,7 +249,7 @@ export default () => (
 
 如果你向 `<Header />` 组件传入另一个 prop，像这样：
 
-```jsx:title=src/pages/about.js
+```jsx
 <Header headerText="About Gatsby" arbitraryPhrase="is arbitrary" />
 ```
 
@@ -257,7 +257,7 @@ export default () => (
 
 6.  为了着重解释这样做如何使得你的组件可复用：在 about 页面中添加一个额外的 `<Header />` 组件，然后把下面这段代码复制到你的 `src/pages/about.js` 文件里并保存。
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 import Header from "../components/header"
 
@@ -288,7 +288,7 @@ export default () => (
 
 1. 打开 index 页面组件（`src/pages/index.js`），从 Gatsby 中引入`<Link />` 组件，在 header 上面添加一个 `<Link />` 组件，并且给这个新组件添加一个值为 `"/contact/"` 的 `to` 属性来指定路径名：
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 import { Link } from "gatsby" // highlight-line
 import Header from "../components/header"
@@ -311,7 +311,7 @@ export default () => (
 
 2. 现在你必须为你的新页面 "Contact" 创建一个页面组件： `src/pages/contact.js` 。并把它连接回到主页：
 
-```jsx:title=src/pages/contact.js
+```jsx
 import React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"

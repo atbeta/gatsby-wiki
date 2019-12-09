@@ -29,7 +29,7 @@ _**注意**: 通常，数据源会直接为内容提供一个 slug 或路径名�
 
 所以你要这么做：在站点的根目录下，创建一个名为 `gatsby-node.js` 的文件并添加以下代码。
 
-```javascript:title=gatsby-node.js
+```javascript
 exports.onCreateNode = ({ node }) => {
   console.log(node.internal.type)
 }
@@ -43,7 +43,7 @@ exports.onCreateNode = ({ node }) => {
 
 修改你的函数使其仅仅记录 `MarkdownRemark` 节点。
 
-```javascript:title=gatsby-node.js
+```javascript
 exports.onCreateNode = ({ node }) => {
   // highlight-start
   if (node.internal.type === `MarkdownRemark`) {
@@ -55,7 +55,7 @@ exports.onCreateNode = ({ node }) => {
 
 你需要使用每一个 Markdown 文件的名称来创建页面 slug。`pandas-and-bananas.md` 就变成 `/pandas-and-bananas/`。但要如何从 `MarkdownRemark` 节点中获取文件名称呢？你需要 _遍历_ 一遍它的 _父节点_ `File` 的 “节点图”。因为 `File` 节点包含了磁盘中你所需要的文件数据。再次修改函数来实现它：
 
-```javascript:title=gatsby-node.js
+```javascript
 // highlight-next-line
 exports.onCreateNode = ({ node, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
@@ -73,7 +73,7 @@ exports.onCreateNode = ({ node, getNode }) => {
 
 现在你需要创建 slug。由于通过文件名创建 slug 的逻辑可能会很棘手，因此 `gatsby-source-filesystem` 插件附带了创建 slug 的功能。让我们来使用它。
 
-```javascript:title=gatsby-node.js
+```javascript
 const { createFilePath } = require(`gatsby-source-filesystem`) // highlight-line
 
 exports.onCreateNode = ({ node, getNode }) => {
@@ -89,7 +89,7 @@ exports.onCreateNode = ({ node, getNode }) => {
 
 为此，你将向 API 的实现传递一个函数，该函数称为 [`createNodeField`](/docs/actions/#createNodeField)。此功能允许你在其他插件创建的节点里创建其他字段。只有节点的原始创建者才能直接修改该节点——所有其他插件（包括你的`gatsby-node.js`）都必须使用此函数来创建额外字段。
 
-```javascript:title=gatsby-node.js
+```javascript
 const { createFilePath } = require(`gatsby-source-filesystem`)
 // highlight-next-line
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -129,7 +129,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 在同一个文件  `gatsby-node.js` 中，添加以下代码。
 
-```javascript:title=gatsby-node.js
+```javascript
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -182,7 +182,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 新建一个目录位于 `src/templates`，然后添加以下代码到一个新文件 `src/templates/blog-post.js` 中。
 
-```jsx:title=src/templates/blog-post.js
+```jsx
 import React from "react"
 import Layout from "../components/layout"
 
@@ -197,7 +197,7 @@ export default () => {
 
 然后更新我们的 `gatsby-node.js`：
 
-```javascript:title=gatsby-node.js
+```javascript
 const path = require(`path`) // highlight-line
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -255,7 +255,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 看起来有点单调无聊，而且并不是你想要看到的。现在你可以从 Markdown 博文中提取数据。把 `src/templates/blog-post.js` 的文件内容替换为：
 
-```jsx:title=src/templates/blog-post.js
+```jsx
 import React from "react"
 import { graphql } from "gatsby" // highlight-line
 import Layout from "../components/layout"
@@ -300,7 +300,7 @@ export const query = graphql`
 
 回到 `src/pages/index.js` 文件中，查询你的 Markdown slugs，并且创建链接。
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby" // highlight-line

@@ -53,7 +53,7 @@ npm install --save gatsby-plugin-typography react-typography typography typograp
 
 2. 编辑项目根目录下的文件 `gatsby-config.js` ，如下：
 
-```javascript:title=gatsby-config.js
+```javascript
 module.exports = {
   plugins: [
     {
@@ -72,7 +72,7 @@ module.exports = {
 
 3. Typography.js 需要一个配置文件。 在 `src` 目录中创建一个名为 `utils` 的新目录。 然后在 `utils` 中添加一个名为 `typography.js` 的新文件，并将以下内容复制到该文件中：
 
-```javascript:title=src/utils/typography.js
+```javascript
 import Typography from "typography"
 import fairyGateTheme from "typography-theme-fairy-gates"
 
@@ -96,7 +96,7 @@ gatsby develop
 
 将以下内容复制到你的 `src/pages/index.js` 文件中，以便你更好的看到 Typography.js 生成的 CSS 样式的效果。
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -116,7 +116,7 @@ export default () => (
 
 让我们快速改进。许多网站在页面中间居中显示一列文本。 要创建此样式，请将以下样式添加到 `src/pages/index.js` 中的 `<div>` 元素中。
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -139,7 +139,7 @@ export default () => (
 
 现在让我们继续学习布局组件。为了准备好这一部分，请在项目中添加几个新页面：“关于我们” 页面和 “联系我们” 页面。
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -150,7 +150,7 @@ export default () => (
 )
 ```
 
-```jsx:title=src/pages/contact.js
+```jsx
 import React from "react"
 
 export default () => (
@@ -177,7 +177,7 @@ export default () => (
 
 2. 在上面的目录中创建一个非常基本的布局组件文件 `src/components/layout.js`：
 
-```jsx:title=src/components/layout.js
+```jsx
 import React from "react"
 
 export default ({ children }) => (
@@ -189,7 +189,7 @@ export default ({ children }) => (
 
 3. 将此新的布局组件引入到你的 `src/pages/index.js` 页面组件中：
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 import Layout from "../components/layout" // highlight-line
 
@@ -218,7 +218,7 @@ export default () => (
 
 1. 将以下代码添加到新的布局组件：
 
-```jsx:title=src/components/layout.js
+```jsx
 import React from "react"
 
 export default ({ children }) => (
@@ -237,7 +237,7 @@ export default ({ children }) => (
 
 1. 将以下内容复制到布局组件文件中：
 
-```jsx:title=src/components/layout.js
+```jsx
 import React from "react"
 // highlight-start
 import { Link } from "gatsby"

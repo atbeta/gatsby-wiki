@@ -80,7 +80,7 @@ npm install --save gatsby-plugin-typography typography react-typography typograp
 
 建立一个和 [第 3 章](/tutorial/part-three) 中建立的站点相似的新站点. 这个站点要有一个布局组件和两个页面组件:
 
-```jsx:title=src/components/layout.js
+```jsx
 import React from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
@@ -120,7 +120,7 @@ export default ({ children }) => (
 )
 ```
 
-```jsx:title=src/pages/index.js
+```jsx
 import React from "react"
 import Layout from "../components/layout"
 
@@ -137,7 +137,7 @@ export default () => (
 )
 ```
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 import Layout from "../components/layout"
 
@@ -152,7 +152,7 @@ export default () => (
 )
 ```
 
-```javascript:title=src/utils/typography.js
+```javascript
 import Typography from "typography"
 import kirkhamTheme from "typography-theme-kirkham"
 
@@ -164,7 +164,7 @@ export const rhythm = typography.rhythm
 
 `gatsby-config.js` (必须在项目根目录, 不是 src 目录)
 
-```javascript:title=gatsby-config.js
+```javascript
 module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
@@ -194,7 +194,7 @@ module.exports = {
 
 这些常用数据的存放位置就是 `gatsby-config.js` 文件中的 `siteMetadata` 对象。添加你的网站标题到 `gatsby-config.js` 文件里：
 
-```javascript:title=gatsby-config.js
+```javascript
 module.exports = {
   // highlight-start
   siteMetadata: {
@@ -219,7 +219,7 @@ module.exports = {
 
 现在网站标题能被查询到了。用 [页面查询](/docs/page-query) 把它添加到 `about.js` 文件里：
 
-```jsx:title=src/pages/about.js
+```jsx
 import React from "react"
 import { graphql } from "gatsby" // highlight-line
 import Layout from "../components/layout"
@@ -254,7 +254,7 @@ export const query = graphql`
 
 在以上 `about.js` 文件的改动中，获取 `title` 的基础 GraphQL 查询语句是：
 
-```graphql:title=src/pages/about.js
+```graphql
 {
   site {
     siteMetadata {
@@ -276,7 +276,7 @@ Page queries live outside of the component definition -- by convention at the en
 
 我们继续对 `src/components/layout.js` 文件内容做一些更改。用 `useStaticQuery` hook 和一个 `{data.site.siteMetadata.title}` 引用来使用这个数据。改完后你的文件将如下所示：
 
-```jsx:title=src/components/layout.js
+```jsx
 import React from "react"
 import { css } from "@emotion/core"
 // highlight-next-line

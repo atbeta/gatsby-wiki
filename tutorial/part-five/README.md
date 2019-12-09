@@ -49,7 +49,7 @@ npm install --save gatsby-source-filesystem
 
 然后把这些代码添加到 `gatsby-config.js`:
 
-```javascript:title=gatsby-config.js
+```javascript
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
@@ -107,7 +107,7 @@ module.exports = {
 
 用你刚刚创建好的 `allFile` GraphQL 查询语句来创建一个新文件 `src/pages/my-files.js`
 
-```jsx:title=src/pages/my-files.js
+```jsx
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
@@ -147,7 +147,7 @@ export const query = graphql`
 
 让我们继续添加一些代码来显示出文件数据。
 
-```jsx:title=src/pages/my-files.js
+```jsx
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"

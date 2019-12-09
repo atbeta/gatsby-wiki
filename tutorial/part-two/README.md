@@ -75,7 +75,7 @@ touch global.css
 
 2. 在 global.css 文件中定义一些样式：
 
-```css:title=src/styles/global.css
+```css
 html {
   background-color: lavenderblush;
 }
@@ -108,7 +108,7 @@ touch gatsby-browser.js
 
 2. 将你刚刚创建的样式表导入 “gatsby-browser.js” 文件中：
 
-```javascript:title=gatsby-browser.js
+```javascript
 import "./src/styles/global.css"
 
 // 或者:
@@ -153,7 +153,7 @@ Gatsby 可与 CSS 模块一起使用。 强烈建议 Gatsby（以及 React）新
 
 1. 在 `src/components` 目录下创建一个新目录，然后在此目录中创建一个名为 `container.js` 的文件并粘贴以下内容：
 
-```javascript:title=src/components/container.js
+```javascript
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -166,7 +166,7 @@ export default ({ children }) => (
 
 2. 在同一目录（`src/components`）中，创建一个 container.module.css 文件并复制 / 粘贴以下内容：
 
-```css:title=src/components/container.module.css
+```css
 .container {
   margin: 3rem auto;
   max-width: 600px;
@@ -177,7 +177,7 @@ export default ({ children }) => (
 
 3. 创建新的页面组件文件 `src/pages/about-css-modules.js`:
 
-```javascript:title=src/pages/about-css-modules.js
+```javascript
 import React from "react"
 
 import Container from "../components/container"
@@ -202,7 +202,7 @@ export default () => (
 
 2. 将以下内容粘贴到文件中：
 
-```css:title=src/pages/about-css-modules.module.css
+```css
 .user {
   display: flex;
   align-items: center;
@@ -238,7 +238,7 @@ export default () => (
 
 3. 把文件 `src/pages/about-css-modules.module.css` 文件导入到你之前创建 `about-css-modules.js` 文件页面，编辑开始几行代码如下：
 
-```javascript:title=src/pages/about-css-modules.js
+```javascript
 import React from "react"
 // highlight-next-line
 import styles from "./about-css-modules.module.css"
@@ -256,7 +256,7 @@ console.log(styles)
 
 4. 在 `about-css-modules.js` 页面组件中内联新建一个的 `<User />` 组件。 修改 `about-css-modules.js` 文件如下：
 
-```jsx:title=src/pages/about-css-modules.js
+```jsx
 import React from "react"
 import styles from "./about-css-modules.module.css"
 import Container from "../components/container"
