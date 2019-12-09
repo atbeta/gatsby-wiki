@@ -1,4 +1,8 @@
-# 安装开发环境
+---
+title: 安装开发环境
+typora-copy-images-to: ./
+disableTableOfContents: true
+---
 
 在开始创建第一个 Gatsby 网站之前，你需要熟悉一些核心 Web 技术，并确保已安装完所有必需的依赖、工具及环境。
 

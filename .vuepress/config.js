@@ -3,9 +3,9 @@ module.exports = {
   description: '基于 React + Typescript + GraphQL 快速搭建网站',
   themeConfig: {
     nav: [
-      { text: '首页', link: '/' },
       { text: '文档', link: '/docs/' },
       { text: '教程', link: '/tutorials/' },
+      { text: '首页', link: '/' }
     ],
     sidebar: {
       '/docs': [
@@ -25,11 +25,19 @@ module.exports = {
       ],
       '/tutorials': [
         {
-          title: '测试',
+          title: '教程',
           collapsable: false,
           children: [
             ['/tutorials/', '介绍'],
-            ['/tutorials/part-zero/', '第一部分']
+            ['/tutorials/part-zero/', '0. 安装开发环境'],
+            ['/tutorials/part-one/', '1. 了解 Gatsby 的构建模块'],
+            ['/tutorials/part-two/', '2. 在 Gatsby 中使用 CSS 样式'],
+            ['/tutorials/part-three/', '3. 创建嵌套的布局组件'],
+            ['/tutorials/part-four/', '4. Gatsby 中的数据'],
+            ['/tutorials/part-five/', '5. 数据源插件'],
+            ['/tutorials/part-six/', '6. 数据转换插件'],
+            ['/tutorials/part-seven/', '7. 以编程的方式利用数据创建页面'],
+            ['/tutorials/part-eight/', '8. 让网站准备好上线'],
           ]
         }
       ]
