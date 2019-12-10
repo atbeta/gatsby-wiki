@@ -13,8 +13,9 @@ module.exports = {
           title: '文档',
           collapsable: false,
           children: [
-            '/docs/introduction',
-            '/docs/quick-start'
+            ['/docs/', '介绍'],
+            '/docs/quick-start',
+            '/docs/recipes'
           ]
         },
         {
